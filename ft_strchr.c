@@ -1,23 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 14:22:45 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/09/21 19:05:48 by jgamonal         ###   ########.fr       */
+/*   Created: 2022/09/21 19:09:45 by jgamonal          #+#    #+#             */
+/*   Updated: 2022/09/21 19:39:50 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlen(const char *str)
-{
-	int	i;
+#include <stdio.h>
 
-	i = 0;
-	while (str[i] != '\0')
+char	*ft_strchr(const char *s, int c)
+{
+	
+	while (*s != '\0')
 	{
-		i++;
+		if (*s == c)
+			{
+				return (*s);
+			}
+	s++;
 	}
-	return (i);
+return (*s);
+}
+
+int main(void)
+{
+	
+	ft_strchr("hola @josu", '@');
+	printf("%s", ft_strchr(s));
 }

@@ -1,16 +1,27 @@
 #-*-Makefile-*-
+SRC = m.c ft_atoi.c ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c ft_strlen.c ft_strncmp.c ft_tolower.c ft_toupper.c
+
+OBJ = $(SRC:%.c=%.o)
+
+NAME = libft.a
 
 CC = gcc
-CCFLAGS = -Wall -Wextra -Werror
-LDFLAGS =
-OBJFILES = ft_atoi.o ft_isalnum.o ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o ft_strlen.o ft_strncmp.o ft_tolower.o ft_toupper.o m.o 
-TARGET = a.out
+CFLAGS = -Wall -Wextra -Werror
 
-all: $(TARGET)
+RM = /bin/rm -f
+RMDIR = /bin/rmdir
 
-$(TARGET): $(OBJFILES)
-	$(CC) $(CFLAGS) -o $(TARGET) $(OBJFILES) $(LDFLAGS)  
+.PHONY: all clean fclean re
+
+all: $(NAME)
+
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
 clean:
-	rm -f $(OBJFILES) $(TARGET) *~
-fclean:
-re:
+	$(RM) $(wildcard $(OBJ)) # I also modified the clean rule
+
+fclean: clean
+	$(RM) $(NAME)
+
+re: fclean all
