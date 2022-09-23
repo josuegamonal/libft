@@ -1,33 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 15:51:03 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/09/23 15:55:19 by jgamonal         ###   ########.fr       */
+/*   Created: 2022/09/21 19:42:51 by jgamonal          #+#    #+#             */
+/*   Updated: 2022/09/23 16:43:02 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//int	ft_strncmp(const char *s1, const char *s2, size_t n)
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
-
+void	*ft_memset(void *b, int c, unsigned int len)
 {
-	unsigned int	i;
+	char	*a;
 
-	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	a = (char *)b;
+	while (len > 0)
 	{
-		if (s1[i] > s2[i])
-		{
-			return (s1[i] - s2[i]);
-		}
-		else if (s1[i] < s2[i])
-		{
-			return (s1[i] - s2[i]);
-		}
-	i++;
+		*a = c;
+		a++;
+		len--;
 	}
-	return (0);
+	return (b);
 }

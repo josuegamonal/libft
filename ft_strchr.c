@@ -6,29 +6,23 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:09:45 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/09/21 19:39:50 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/09/23 17:07:18 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 char	*ft_strchr(const char *s, int c)
 {
-	
-	while (*s != '\0')
+	int 	i;
+	char *s2;
+	s2 = (char *)s;
+	i = 0;
+	while (s2[i] != '\0')
 	{
-		if (*s == c)
-			{
-				return (*s);
-			}
-	s++;
+		if (s2[i] == '\0')
+			return (s[i]);
+		if (s2[i] == c)
+			return (s[i]);
+	i++;
 	}
-return (*s);
-}
-
-int main(void)
-{
-	
-	ft_strchr("hola @josu", '@');
-	printf("%s", ft_strchr(s));
+	return (s[i]);
 }

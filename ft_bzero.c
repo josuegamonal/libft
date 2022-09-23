@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/16 15:51:03 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/09/23 15:55:19 by jgamonal         ###   ########.fr       */
+/*   Created: 2022/09/23 15:17:04 by jgamonal          #+#    #+#             */
+/*   Updated: 2022/09/23 16:05:09 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//int	ft_strncmp(const char *s1, const char *s2, size_t n)
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+#include <stdio.h>
+#include <ctype.h>
+#include <string.h>
+#include <stddef.h>
 
+void	ft_bzero(void	*s, size_t	n)
 {
+	char	*s_char;
 	unsigned int	i;
 
 	i = 0;
-	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	s_char = (char *)s;
+	while (i < n)
 	{
-		if (s1[i] > s2[i])
-		{
-			return (s1[i] - s2[i]);
-		}
-		else if (s1[i] < s2[i])
-		{
-			return (s1[i] - s2[i]);
-		}
-	i++;
+		s_char[i] = '\0';
+		i++;
 	}
-	return (0);
 }
