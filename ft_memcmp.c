@@ -6,8 +6,13 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:27:43 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/09/23 16:28:24 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/09/24 11:36:56 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+
 int	memcmp(const void *s1, const void *s2, size_t n)
+{
+
+}

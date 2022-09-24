@@ -6,13 +6,13 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 15:51:03 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/09/23 15:55:19 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/09/24 11:37:54 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//int	ft_strncmp(const char *s1, const char *s2, size_t n)
-int	ft_strncmp(const char *s1, const char *s2, unsigned int n)
+#include <stddef.h>
 
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned int	i;
 

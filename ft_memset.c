@@ -6,11 +6,13 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:42:51 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/09/23 16:43:02 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/09/24 11:41:51 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memset(void *b, int c, unsigned int len)
+#include <stddef.h>
+
+void	*ft_memset(void *b, int c, size_t len)
 {
 	char	*a;
 

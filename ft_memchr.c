@@ -6,11 +6,13 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:25:59 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/09/23 16:33:26 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/09/24 11:36:50 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stddef.h>
+
 void	*memchr(const void *s, int c, size_t n)
 {
-	
+
 }
