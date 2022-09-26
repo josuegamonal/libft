@@ -12,8 +12,25 @@
 
 #include <stddef.h>
 
-unsigned int	ft_strlcpy(char *restrict dst,
-const char *restrict src, size_t dstsize)
+unsigned int	ft_strlcpy(char * dst, const char * src, size_t dstsize)
 {
+    size_t	i;
+	size_t	len;
 
+	len = 0;
+	if (src != NULL)
+	{
+		len = ft_strlen(src);
+		if (dst != NULL && dstsize != 0)
+		{
+			i = 0;
+			while ((i < len) && i < (dstsize - 1))
+			{
+				dst[i] = src[i];
+				i++;
+			}
+			dst[i] = '\0';
+		}
+	}
+	return (len);
 }
