@@ -6,11 +6,11 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:28:53 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/09/24 11:12:35 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/10/05 08:35:36 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*The strnstr() function locates the	first occurrence of the	null-termi-
-     nated string little in the	string big, where not more than	len characters
+
+    /* nated string little in the	string big, where not more than	len characters
      are searched.  Characters that appear after a `\0'	character are not
      searched.	Since the strnstr() function is	a FreeBSD specific API,	it
      should only be used when portability is not a concern.

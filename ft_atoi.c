@@ -6,11 +6,22 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 15:35:55 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/09/24 11:45:13 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/10/05 10:13:12 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+/*The atoi() function converts the initial portion of the string pointed to by str to int representation.
+
+     It is equivalent to:
+
+           (int)strtol(str, (char **)NULL, 10);
+
+     While the atoi() function uses the current locale, the atoi_l() function may be passed a locale
+     directly. See xlocale(3) for more information.*/
+	 
+#include <stdlib.h>
+
+int	ft_atoi(const char *str)
 {
 	int	i;
 	int	b;
