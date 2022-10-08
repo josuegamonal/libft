@@ -6,7 +6,7 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:24:29 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/09/24 10:22:14 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/10/08 10:05:33 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,21 @@ terminating `\0'
 The functions strchr() and strrchr() return a pointer to the located character,
 or NULL if the character does not appear in the string..*/
 
+#include <string.h>
+#include "libft.h"
+
 char	*ft_strrchr(const char *s, int c)
 {
-	char 	a;
-	char	*s1;
-	int		i;
+	int	i;
 
-	s1 = (char *)s;
-	a = c + '0';
-	i = 0;
-	while (i != '\0')
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		if (s1[i] == a)
-		{
-			return (&s1[i]);
+		if (s[i] == c)
+		{	
+			return ((char *)&s[i]);
 		}
-		if (s1[i] == '\0')
-		{
-			return (0);
-		}
-		i++;
+		i--;
 	}
 	return (0);
 }

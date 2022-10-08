@@ -6,7 +6,7 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:21:51 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/10/05 10:18:12 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/10/08 09:18:39 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,8 +42,9 @@ RETURN VALUES
      bility to handle this.*/
 	 
 #include <stddef.h>
+#include "libft.h"
 
-unsigned int	ft_strlcpy(char * dst, const char * src, size_t dstsize)
+size_t	ft_strlcpy(char * dst, const char * src, size_t dstsize)
 {
     size_t	i;
 	size_t	len;

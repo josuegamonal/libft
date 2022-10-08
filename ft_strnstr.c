@@ -6,7 +6,7 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:28:53 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/10/05 08:35:36 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/10/08 11:00:02 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ RETURN VALUES
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-    unsigned int	i;
+	unsigned int	i;
 	unsigned int	j;
 
 	if (!haystack || !needle)

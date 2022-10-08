@@ -6,7 +6,7 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 15:35:55 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/10/05 10:13:12 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/10/08 10:52:55 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_atoi(const char *str)
 {
 	int	i;
 	int	b;
-	int	c;
+	unsigned int	c;
 
 	i = 0;
 	b = 1;
@@ -47,5 +47,5 @@ int	ft_atoi(const char *str)
 		c = (str[i] - '0') + (c * 10);
 		i++;
 	}
-	return (b * c);
+	return ((int)(b * c));
 }

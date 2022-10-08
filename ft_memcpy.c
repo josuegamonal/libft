@@ -6,7 +6,7 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:17:17 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/09/24 11:37:03 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/10/08 09:14:26 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,5 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 		dst1[i] = src1[i];
 		i++;
 	}
-	return (0);
+	return (dst);
 }
