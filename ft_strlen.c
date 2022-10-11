@@ -6,13 +6,13 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 14:22:45 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/10/08 11:28:15 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/10/11 14:48:25 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 

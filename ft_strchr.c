@@ -6,7 +6,7 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:09:45 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/10/08 11:21:43 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/10/11 16:08:43 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ char	*ft_strchr(const char *s, int c)
 	char	*s2;
 
 	s2 = (char *)s;
+	c = c % 256;
 	while (*s2 != c)
 	{
 		if (*s2 == '\0')

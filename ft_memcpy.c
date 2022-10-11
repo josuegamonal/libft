@@ -6,13 +6,13 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:17:17 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/10/08 11:56:10 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/10/11 14:47:05 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	unsigned int	i;
 
