@@ -6,7 +6,7 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:21:51 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/10/11 16:08:41 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/10/15 10:25:37 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	i = 0;
 	if (dstsize > 0)
 	{
-		while (src[i] && i < (dstsize -  1))
+		while (src[i] && i < (dstsize - 1))
 		{
 			dst[i] = src[i];
 			i++;
