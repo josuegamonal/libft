@@ -6,15 +6,10 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 19:42:51 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/10/08 09:14:33 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/10/08 11:20:34 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*The memset() function writes len bytes of value c (converted to an unsigned char) to the string b.
-
-RETURN VALUES
-     The memset() function returns its first argument.*/
-	 
 #include <stddef.h>
 
 void	*ft_memset(void *b, int c, size_t len)

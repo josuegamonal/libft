@@ -1,40 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/23 16:22:59 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/10/11 14:47:08 by jgamonal         ###   ########.fr       */
+/*   Created: 2022/10/22 08:36:34 by jgamonal          #+#    #+#             */
+/*   Updated: 2022/10/22 09:21:34 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*src1;
-	size_t	len_dst;
-	size_t	len_src;
-	size_t	res;
-	size_t	i;
+	char	*s3;
+	int		i;
+	int		j;
+	int		len;
 
-	src1 = (char *)src;
-	len_dst = ft_strlen(dst);
-	len_src = ft_strlen(src1);
+	len = ft_strlen(s1) + ft_strlen(s2);
 	i = 0;
-	res = 0;
-	if (dstsize > len_dst)
-		res = len_src + len_dst;
-	else
-		res = len_src + dstsize;
-	while (src1[i] && (len_dst + 1) < dstsize)
+	s3 = (char *) malloc(sizeof(char) * (len + 1));
+	if (!(s3))
+		return (NULL);
+	while (s1[i])
 	{
-		dst[len_dst] = src1[i];
-		len_dst++;
+		s3[i] = s1[i];
 		i++;
 	}
-	dst[len_dst] = '\0';
-	return (res);
+	j = i;
+	i = 0;
+	while (s2[i])
+	{
+		s3[j] = s2[i];
+		i++;
+		j++;
+	}
+	s3[j] = '\0';
+	return (s3);
 }

@@ -6,32 +6,29 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:25:59 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/10/08 10:56:54 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/10/08 11:46:34 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/*The memchr() function locates the first occurrence of c (converted to an
-     unsigned char) in string s.
-RETURN VALUES
-     The memchr() function returns a pointer to the byte located, or NULL if
-     no such byte exists within n bytes.*/
 
 #include <stddef.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*str;
+	unsigned char	character;
 	unsigned int	i;
+
 	str = (unsigned char *)s;
+	character = (unsigned char)c;
 	i = 0;
 	while (i < n)
 	{
-		if (str[i] == (unsigned char *)c)
+		if (*str == character)
 		{	
-			return ((void*) &str[i]);
+			return (str);
 		}
+		str++;
 		i++;
 	}
-	 return (NULL);
+	return (NULL);
 }
-
