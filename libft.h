@@ -6,7 +6,7 @@
 /*   By: jgamonal <jgamonal@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 10:37:55 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/11/05 19:24:06 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/11/15 19:47:24 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,10 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+typedef struct s_list
+{
+void *content;
+struct s_list *next;
+} t_list;
+t_list	*ft_lstnew(void *content);
 #endif
