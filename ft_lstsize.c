@@ -6,7 +6,7 @@
 /*   By: josue <josue@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 18:36:43 by josue             #+#    #+#             */
-/*   Updated: 2022/11/17 18:58:25 by josue            ###   ########.fr       */
+/*   Updated: 2022/11/18 17:29:56 by josue            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_lstsize(t_list *lst)
 {
-	unsigned int    i;
-	
+	unsigned int	i;
+
 	i = 0;
 	while (lst)
 	{

@@ -6,7 +6,7 @@
 /*   By: josue <josue@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/15 18:47:08 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/11/17 19:02:47 by josue            ###   ########.fr       */
+/*   Updated: 2022/11/18 17:29:53 by josue            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 t_list	*ft_lstnew(void *content)
 {
-    t_list	*new;
+	t_list	*new;
 
-    if (!(new = malloc (sizeof (t_list))))
-        return (NULL);
-    new -> content = content;
-    new -> next = NULL;
-    return (new);
+	new = malloc (sizeof (t_list));
+	if (!new)
+	//if (!(new = malloc (sizeof (t_list))))
+		return (NULL);
+	new -> content = content;
+	new -> next = NULL;
+	return (new);
 }

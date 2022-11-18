@@ -6,7 +6,7 @@
 /*   By: josue <josue@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 10:37:55 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/11/17 19:13:00 by josue            ###   ########.fr       */
+/*   Updated: 2022/11/18 17:29:55 by josue            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,9 @@ void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 typedef struct s_list
 {
-void *content;
-struct s_list *next;
-} t_list;
+	void			*content;
+	struct s_list	*next;
+}	t_list;
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
