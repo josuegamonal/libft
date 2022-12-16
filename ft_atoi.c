@@ -6,11 +6,20 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 15:35:55 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/12/16 17:40:03 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/12/16 17:55:44 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+
+int	check_max_min(unsigned int c, int b)
+{
+	if (c > 2147483647 && b == 1)
+		return (-1);
+	if (c > 2147483648 && b == -1)
+		return (0);
+	return (0);
+}
 
 int	ft_atoi(const char *str)
 {
@@ -35,10 +44,7 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		c = (str[i] - '0') + (c * 10);
-		if (c > 2147483647 && b == 1)
-			return (-1);
-		if (c > 2147483648 && b == -1)
-			return (0);
+		check_max_min(c, b);
 		i++;
 	}
 	return ((int)(b * c));
