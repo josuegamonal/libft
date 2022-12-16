@@ -6,7 +6,7 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 15:35:55 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/10/11 15:15:10 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/12/16 17:40:03 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,10 @@ int	ft_atoi(const char *str)
 	while (str[i] >= '0' && str[i] <= '9')
 	{
 		c = (str[i] - '0') + (c * 10);
+		if (c > 2147483647 && b == 1)
+			return (-1);
+		if (c > 2147483648 && b == -1)
+			return (0);
 		i++;
 	}
 	return ((int)(b * c));

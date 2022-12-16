@@ -6,7 +6,7 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/05 11:32:56 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/11/05 11:46:59 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/12/16 14:32:51 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*str;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	len = ft_strlen(s);
 	str = malloc (sizeof(char) * (len + 1));
 	if (!str)
