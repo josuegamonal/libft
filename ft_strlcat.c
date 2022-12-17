@@ -6,7 +6,7 @@
 /*   By: jgamonal <jgamonal@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 16:22:59 by jgamonal          #+#    #+#             */
-/*   Updated: 2022/12/16 17:38:40 by jgamonal         ###   ########.fr       */
+/*   Updated: 2022/12/17 09:45:44 by jgamonal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,27 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	char	*src1;
 	size_t	len_dst;
 	size_t	len_src;
-	size_t	res;
 	size_t	i;
 
 	if (dstsize == 0)
 		return (ft_strlen(src));
 	if (!dst || !src)
 		return (ft_strlen(dst) + ft_strlen(src));
-	src1 = (char *)src;
 	len_dst = ft_strlen(dst);
-	len_src = ft_strlen(src1);
+	len_src = ft_strlen(src);
 	i = 0;
-	res = 0;
-	if (dstsize > len_dst)
-		res = len_src + len_dst;
-	else
-		res = len_src + dstsize;
-	while (src1[i] && (len_dst + 1) < dstsize)
+	if (dstsize < len_dst + 1)
+		return (dstsize + len_src);
+	if (dstsize > len_dst + 1)
 	{
-		dst[len_dst] = src1[i];
-		len_dst++;
-		i++;
+		while (src[i] != 0 && len_dst +1 + i < dstsize)
+		{
+			dst[len_dst + i] = src[i];
+			i++;
+		}
 	}
-	dst[len_dst] = '\0';
-	return (res);
+	dst[len_dst + i] = '\0';
+	return (len_dst + len_src);
 }

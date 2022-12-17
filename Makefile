@@ -30,7 +30,7 @@ bonus: $(OBJ) $(BONUSOBJ)
 	$(CC) -c $(CFLAGS) $?
 
 clean:
-	rm -f $(OBJ) 
+	rm -f $(OBJ) $(BONUSOBJ)
 
 fclean: clean
 	rm -f $(NAME)
