@@ -1,4 +1,15 @@
-#-*-Makefile-*-
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: josue <josue@student.42.fr>                +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/01/19 19:18:35 by josue             #+#    #+#              #
+#    Updated: 2023/01/19 19:44:21 by josue            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = libft.a
 
 SRC =ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c ft_memset.c \
@@ -21,10 +32,10 @@ CFLAGS = -Wall -Wextra -Werror
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(AR) -r $@ $?
+	ar -rcs $(NAME) $(OBJ)
 
-bonus: $(OBJ) $(BONUSOBJ)
-		$(AR) -r $(NAME) $?
+bonus: $(OBJ) $(BONUSOBJ) 
+		ar -rcs $(NAME) $(OBJ) $(BONUSOBJ)
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) $?
